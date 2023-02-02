@@ -41,11 +41,20 @@ const greet = (hello: hello) => {
   return "Hello unknown friend!";
 };
 
-// Enums
-// "Unlike most TypeScript features, Enums aren't a type-level
-// addition to JavaScript but something added to the language and runtime."
+// ENUMS
+// "Unlike most TypeScript features, Enums aren't a type-level addition
+// to JavaScript but something added to the language and runtime."
 enum Grade {
   A,
   B = 0,
   C,
 }
+
+// FUNCTIONS
+// type mathFunction = (a: number, b: number) => number;
+interface mathFunction {
+  (a: number, b: number): number;
+}
+let multiply: mathFunction = function (c, d) {
+  return c * d;
+};
